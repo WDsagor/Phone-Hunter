@@ -1,0 +1,5 @@
+.show-result .custom-hover:hover {
+    box-shadow: 1px 1px 30px 1px black;
+    transition: 0.7s;
+    cursor: pointer;
+}

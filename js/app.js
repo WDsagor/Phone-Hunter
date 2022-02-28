@@ -16,7 +16,7 @@ const searchResult = (phones) => {
         const div = document.createElement('div');
         div.classList.add('col')
         div.innerHTML = `
-        <div class="card m-3 p-3 border rounded border-secondary" style="width: 18rem;">
+        <div class="card m-3 p-3 border rounded custom-hover" style="width: 20rem;">
                             <img src="${phone.image}" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">${phone.phone_name}</h5>
