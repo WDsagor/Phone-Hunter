@@ -2,9 +2,11 @@
   box-shadow: 1px 1px 30px 1px grey;
   transition: 0.7s;
   cursor: pointer;
+  
 }
 
 /* show details */
+
 
 .showDetails {
   width: 100%;

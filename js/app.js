@@ -1,16 +1,27 @@
+const displayContainer = document.getElementById('Phone-container');
+const phoneDetail = document.getElementById('phoneDetail');
+const inputField = document.getElementById('searchInput');
+const spinner = document.getElementById('spiner');
+spinner.style.display ='none'
 const search = () => {
-        const inputField = document.getElementById('searchInput');
         const searchText = inputField.value;
-        const url = `https://openapi.programming-hero.com/api/phones?search=${searchText}`
+        if(searchText==='' || searchText==false){
+            displayContainer.innerHTML=`
+            <h1> Result Not Found </h1>
+            `;
+        }
+        else{
+            spinner.style.display ='block'
+            const url = `https://openapi.programming-hero.com/api/phones?search=${searchText}`
         fetch(url)
             .then(res => res.json())
             .then(phoneData => searchResult(phoneData.data.slice(0, 20)));
         inputField.value = '';
+        }
     }
+    
     // search()
 const searchResult = (phones) => {
-    // console.log(phones);
-    const displayContainer = document.getElementById('Phone-container');
     displayContainer.textContent = '';
     for (const phone of phones) {
         const div = document.createElement('div');
@@ -25,7 +36,7 @@ const searchResult = (phones) => {
                             </div>
         `;
         displayContainer.appendChild(div);
-        // console.log(phone);
+        
 
     }
 
@@ -40,7 +51,7 @@ const details = (id) => {
 }
 const showModal =(details)=>{
     console.log(details)
-    const phoneDetail = document.getElementById('phoneDetail');
+   
     const div = document.createElement('div');
         div.classList.add('show-part');
         div.innerHTML=`
