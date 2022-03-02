@@ -46,7 +46,7 @@ const showModal =(details)=>{
         div.innerHTML=`
                         <div class="row">
                                         <div class="col-12 col-lg-6 d-flex justify-content-center align-items-center">
-                                            <img src="${details.image}" alt="" srcset="">
+                                            <img class="img-fluid" src="${details.image}" alt="" srcset="">
                                         </div>
                                         <div class="col-12 col-lg-6 ">
                                             <div class="custom-table">
@@ -54,8 +54,7 @@ const showModal =(details)=>{
                                                     <thead>
                                                         <tr>
                                                             <th colspan="2">Details</th>
-                                                            
-                            
+                                                         
                                                         </tr>
                                                     </thead>
                                                     <tbody>
