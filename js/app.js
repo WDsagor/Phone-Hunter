@@ -9,6 +9,7 @@ const search = () => {
             displayContainer.innerHTML=`
             <h1> Result Not Found </h1>
             `;
+                spinner.style.display ='none'
         }
         else{
             spinner.style.display ='block'
@@ -16,6 +17,7 @@ const search = () => {
         fetch(url)
             .then(res => res.json())
             .then(phoneData => searchResult(phoneData.data.slice(0, 20)));
+                 spinner.style.display ='none'
         inputField.value = '';
         }
     }
